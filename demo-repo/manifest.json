@@ -1,0 +1,56 @@
+{
+  "repository": "acme/payments-platform",
+  "defaultBranch": "main",
+  "description": "Real multi-service demo repository parsed live by DeployGuard AI AST & Dependency Graph Engine.",
+  "services": {
+    "services/payment_service.js": {
+      "service": "payment-service",
+      "slaTier": "P0",
+      "ownerTeam": "payments-core",
+      "onCall": "r.patel@acme.io",
+      "criticalPath": true
+    },
+    "services/order_service.js": {
+      "service": "order-service",
+      "slaTier": "P0",
+      "ownerTeam": "commerce-platform",
+      "onCall": "priya.nair@acme.io",
+      "criticalPath": true
+    },
+    "services/subscription_billing.js": {
+      "service": "subscription-billing",
+      "slaTier": "P0",
+      "ownerTeam": "billing-infra",
+      "onCall": "james.okafor@acme.io",
+      "criticalPath": true
+    },
+    "services/fraud_detection.js": {
+      "service": "fraud-detection",
+      "slaTier": "P1",
+      "ownerTeam": "trust-and-safety",
+      "onCall": "m.chen@acme.io",
+      "criticalPath": true
+    },
+    "services/auth_gateway.js": {
+      "service": "auth-gateway",
+      "slaTier": "P1",
+      "ownerTeam": "identity-security",
+      "onCall": "s.nair@acme.io",
+      "criticalPath": true
+    },
+    "services/session_cache.js": {
+      "service": "session-cache",
+      "slaTier": "P1",
+      "ownerTeam": "platform-infra",
+      "onCall": "d.kim@acme.io",
+      "criticalPath": false
+    },
+    "services/billing_ui.js": {
+      "service": "billing-ui",
+      "slaTier": "P2",
+      "ownerTeam": "billing-experience",
+      "onCall": "a.verma@acme.io",
+      "criticalPath": false
+    }
+  }
+}

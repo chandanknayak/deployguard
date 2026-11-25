@@ -1,0 +1,22 @@
+{
+  "name": "deployguard-ai",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "DEPLOYGUARD_DEV=1 node server.ts",
+    "start": "node server.ts",
+    "build": "npm run build --workspace=deployguard-enterprise-web",
+    "preview": "node server.ts",
+    "lint": "npm run lint --workspace=deployguard-enterprise-web",
+    "test": "node --test engine/riskEngine.test.ts engine/enterprise.test.ts frontend/src/riskUtils.test.js"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "acorn": "^8.19.0",
+    "express": "^5.3.0"
+  }
+}
